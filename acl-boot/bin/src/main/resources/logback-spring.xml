@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration>
+<configuration>
+
+
+  <springProperty scope="context" name="APP_NAME"
+    source="spring.application.name" />
+
+
+  <logger name="org.springframework.beans" level="ERROR" />
+  <logger name="org.springframework.boot" level="ERROR" />
+  <logger name="org.springframework.context" level="ERROR" />
+  <logger name="org.springframework.jdbc" level="ERROR" />
+  <logger name="org.springframework.jmx" level="ERROR" />
+  <logger name="org.springframework.security" level="ERROR" />
+  <logger name="org.springframework.web" level="ERROR" />
+  <logger name="org.springframework.integration" level="ERROR" />
+  <logger name="org.hibernate.type" level="ERROR" />
+  <logger name="org.hibernate" level="ERROR" />
+  <logger name="org.hibernate.SQL" level="ERROR" />
+<logger name="org.springframework.integration.handler.LoggingHandler"
+		level="INFO" />
+
+	<logger
+		name="org.springframework.aop.interceptor.PerformanceMonitorInterceptor"
+		level="TRACE" />	
+	<logger name="com.softron" level="INFO" />
+
+   <property name="LOG_FILE" value="/app/logs/${APP_NAME}/${APP_NAME}.%d{yyyy-MM-dd}.%i.log" />
+    <property name="FILE_SIZE" value="10MB" />
+	<property name="CHARSET" value="UTF-8" />
+	<property name="GENERIC_PATTERN" scope="context"
+		value="[%date{ISO8601}] [%p] [%t] [%c{2}] %4L | [S=${APP_NAME:-}] %m%n" />
+	<property name="CONSOLE_LOG_PATTERN" scope="context" value="$GENERIC_PATTERN" />
+	<property name="FILE_LOG_PATTERN" scope="context" value="$GENERIC_PATTERN" />
+
+  <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+    <encoder>
+      <charset>${CHARSET}</charset>
+      <pattern>${GENERIC_PATTERN}</pattern>
+    </encoder>
+  </appender>
+
+  <appender name="FILE"
+    class="ch.qos.logback.core.rolling.RollingFileAppender">
+    <append>true</append>
+    <rollingPolicy
+      class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+      <fileNamePattern>${LOG_FILE}</fileNamePattern>
+      <maxFileSize>${FILE_SIZE}</maxFileSize>
+      <!-- keep 7 days' worth of history -->
+      <maxHistory>7</maxHistory>
+    </rollingPolicy>
+    <encoder>
+      <pattern>${GENERIC_PATTERN}</pattern>
+    </encoder>
+  </appender>
+
+	<root level="INFO">
+		<appender-ref ref="CONSOLE" />
+		<appender-ref ref="FILE" />
+	</root>
+</configuration>

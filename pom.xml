@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.softron</groupId>
+	<artifactId>acl-system</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+
+	<name>acl-system</name>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<springboot.version>2.1.2.RELEASE</springboot.version>
+		<springcloud.version>Greenwich.RELEASE</springcloud.version>
+		<jwtwebtoken.version>0.9.1</jwtwebtoken.version>
+		<java.version>1.8</java.version>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+		<acl.version>0.0.1-SNAPSHOT</acl.version>
+		<oracle.driver.version>12.1.0.2</oracle.driver.version>
+		<org.passay.version>1.0</org.passay.version>
+		<google.guava.version>28.0-jre</google.guava.version>
+		<swagger.version>2.9.2</swagger.version>
+	</properties>
+
+	<modules>
+		<module>acl-core</module>
+		<module>acl-common</module>
+		<module>acl-schema</module>
+		<module>acl-reporting</module>
+		<module>acl-admin</module>
+		<module>acl-security</module>
+		<module>acl-boot</module>
+		<module>acl-datastore</module>
+    	<module>acl-mailer</module>
+		<module>acl-census</module>
+    	<module>acl-masterData</module>
+    	<module>acl-quality</module>
+  </modules>
+
+	<dependencyManagement>
+		<dependencies>
+
+			<!-- Intra module Dependencies -->
+			<dependency>
+				<groupId>com.softron</groupId>
+				<artifactId>acl-census</artifactId>
+				<version>${acl.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.softron</groupId>
+				<artifactId>acl-admin</artifactId>
+				<version>${acl.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.softron</groupId>
+				<artifactId>acl-common</artifactId>
+				<version>${acl.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.softron</groupId>
+				<artifactId>acl-core</artifactId>
+				<version>${acl.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.softron</groupId>
+				<artifactId>acl-mailer</artifactId>
+				<version>${acl.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.softron</groupId>
+				<artifactId>acl-datastore</artifactId>
+				<version>${acl.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.softron</groupId>
+				<artifactId>acl-org-management</artifactId>
+				<version>${acl.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.softron</groupId>
+				<artifactId>acl-reporting</artifactId>
+				<version>${acl.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.softron</groupId>
+				<artifactId>acl-schema</artifactId>
+				<version>${acl.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.softron</groupId>
+				<artifactId>acl-security</artifactId>
+				<version>${acl.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.softron</groupId>
+				<artifactId>acl-masterData</artifactId>
+				<version>${acl.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.softron</groupId>
+				<artifactId>acl-quality</artifactId>
+				<version>${acl.version}</version>
+			</dependency>
+			<!-- Spring Boot Dependencies -->
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-dependencies</artifactId>
+				<version>${springboot.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-dependencies</artifactId>
+				<version>${springcloud.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+	<repositories>
+		<repository>
+			<id>spring-milestones</id>
+			<name>Spring Milestones</name>
+			<url>https://repo.spring.io/libs-milestone</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>nexus-repository</id>
+			<name>Nexus China</name>
+			<url>http://nexus.saas.hand-china.com/content/repositories/rdc/</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+	</repositories>
+
+</project>

@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: nidle
+  jpa:
+    hibernate:
+      ddl-auto: update
+  jmx:
+    enabled: false
+  jackson:
+    serialization:
+      WRITE_DATES_AS_TIMESTAMPS: false
+jwtSecret: s3cret
+jwtExpirationInSeconds: 86400 # 1 Day
+server:
+  port: 8080
+
+app:
+  startup:
+    generate-menu: true

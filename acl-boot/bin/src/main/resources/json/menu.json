@@ -1,0 +1,743 @@
+{
+    "modules": [
+        {
+            "moduleName": "Legal Case Management System",
+            "menus": [
+                {
+                    "title": "Dashboard",
+                    "icon": "ion-home",
+                    "link": "/legal/dashboard",
+                    "home": true,
+                    "sortOrder": 1,
+                    "external": false,
+                    "active": true
+                },
+                {
+                    "title": "Hight Court Case",
+                    "icon": "nb-compose",
+                    "sortOrder": 2,
+                    "active": true,
+                    "children": [
+                        {
+                            "title": "Search",
+                            "icon": "nb-search",
+                            "link": "/legal/forms/search/hc",
+                            "sortOrder": 3,
+                            "active": true
+                        },
+                        {
+                            "title": "Create",
+                            "icon": "nb-compose",
+                            "link": "/legal/forms/hc",
+                            "sortOrder": 4,
+                            "active": true
+                        }
+                    ]
+                },
+                {
+                    "title": "Administrative Case",
+                    "icon": "nb-compose",
+                    "sortOrder": 5,
+                    "active": true,
+                    "children": [
+                        {
+                            "title": "Search",
+                            "icon": "nb-search",
+                            "link": "/legal/forms/search/adm",
+                            "sortOrder": 6,
+                            "active": true
+                        },
+                        {
+                            "title": "Create",
+                            "icon": "nb-compose",
+                            "link": "/legal/forms/adm",
+                            "sortOrder": 7,
+                            "active": true
+                        }
+                    ]
+                },
+                {
+                    "title": "Set up",
+                    "icon": "nb-gear",
+                    "sortOrder": 8,
+                    "active": true,
+                    "children": [
+                        {
+                            "title": "Advocate",
+                            "link": "/legal/setup/advocate",
+                            "sortOrder": 8,
+                            "active": true
+                        },
+                        {
+                            "title": "Court",
+                            "link": "/legal/setup/court",
+                            "sortOrder": 10,
+                            "active": true
+                        },
+                        {
+                            "title": "টঢ়রাইবঢ়নাল",
+                            "link": "/legal/setup/adm-court",
+                            "sortOrder": 11,
+                            "active": true
+                        },
+                        {
+                            "title": "Case Type",
+                            "link": "/legal/setup/casetype",
+                            "sortOrder": 12,
+                            "active": true
+                        },
+                        {
+                            "title": "মামলার ধরণ",
+                            "link": "/legal/setup/adm-casetype",
+                            "sortOrder": 13,
+                            "active": true
+                        },
+                        {
+                            "title": "Petitioner",
+                            "link": "/legal/setup/pet",
+                            "sortOrder": 14,
+                            "active": true
+                        },
+                        {
+                            "title": "Respondent",
+                            "link": "/legal/setup/resp",
+                            "sortOrder": 15,
+                            "active": true
+                        },
+                        {
+                            "title": "Status",
+                            "link": "/legal/setup/status",
+                            "sortOrder": 16,
+                            "active": true
+                        },
+                        {
+                            "title": "অবসঢ়থা",
+                            "link": "/legal/setup/adm-status",
+                            "sortOrder": 17,
+                            "active": true
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "moduleName": "Online Reporting System",
+            "menus": [
+                {
+                    "title": "Dashboard",
+                    "icon": "ion-home",
+                    "link": "/reporting/dashboard",
+                    "home": true,
+                    "sortOrder": 1,
+                    "external": false,
+                    "active": true
+                },
+                {
+                    "title": "Compose",
+                    "icon": "nb-compose",
+                    "sortOrder": 2,
+                    "active": true,
+                    "children": [
+                        {
+                            "title": "Search",
+                            "link": "/reporting/compose-search",
+                            "sortOrder": 3,
+                            "active": true
+                        },
+                        {
+                            "title": "New",
+                            "link": "/reporting/compose",
+                            "sortOrder": 4,
+                            "active": true
+                        }
+                    ]
+                },
+                {
+                    "title": "Inbox",
+                    "icon": "nb-email",
+                    "link": "/reporting/inbox-search",
+                    "sortOrder": 5,
+                    "external": false,
+                    "active": true
+                },
+                {
+                    "title": "Sentbox",
+                    "icon": "nb-paper-plane",
+                    "link": "/reporting/sentbox-search",
+                    "sortOrder": 6,
+                    "external": false,
+                    "active": true
+                },
+                {
+                    "title": "Set up",
+                    "icon": "nb-gear",
+                    "sortOrder": 7,
+                    "active": true,
+                    "children": [
+                        {
+                            "title": "Report Type",
+                            "link": "/reporting/setup/types",
+                            "sortOrder": 8,
+                            "active": true
+                        },
+                        {
+                            "title": "Organization Type",
+                            "link": "/reporting/setup/orgs",
+                            "sortOrder": 9,
+                            "active": true
+                        },
+                        {
+                            "title": "Users Mapping",
+                            "link": "/reporting/setup/org/mapping",
+                            "sortOrder": 10,
+                            "active": true
+                        },
+                        {
+                            "title": "Organization",
+                            "sortOrder": 11,
+                            "active": true,
+                            "children": [
+                                {
+                                    "title": "Create",
+                                    "link": "/reporting/setup/org/create",
+                                    "sortOrder": 12,
+                                    "active": true
+                                },
+                                {
+                                    "title": "List",
+                                    "link": "/reporting/setup/org/list",
+                                    "sortOrder": 13,
+                                    "active": true
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "moduleName": "Census Dashboard",
+            "menus": [
+                {
+                    "title": "Pay Scale Year",
+                    "icon": "nb-person",
+                    "link": "/census/pay-scale-year",
+                    "sortOrder": 1,
+                    "external": false,
+                    "active": true
+                },
+                {
+                    "title": "Grade",
+                    "icon": "nb-person",
+                    "link": "/census/grade",
+                    "sortOrder": 2,
+                    "external": false,
+                    "active": true
+                },
+                {
+                    "title": "Class",
+                    "icon": "nb-person",
+                    "link": "/census/class",
+                    "sortOrder": 3,
+                    "external": false,
+                    "active": true
+                },
+                {
+                    "title": "Census Post",
+                    "icon": "nb-person",
+                    "link": "/census/post",
+                    "sortOrder": 4,
+                    "external": false,
+                    "active": true
+                },
+                {
+                    "title": "Pay Scale",
+                    "icon": "nb-person",
+                    "link": "/census/pay-scale",
+                    "sortOrder": 5,
+                    "external": false,
+                    "active": true
+                },
+                {
+                    "title": "Organization",
+                    "icon": "nb-person",
+                    "link": "/census/organization",
+                    "sortOrder": 6,
+                    "external": false,
+                    "active": true
+                },
+                {
+                    "title": "Census Period",
+                    "icon": "nb-person",
+                    "link": "/census/census-period",
+                    "sortOrder": 7,
+                    "external": false,
+                    "active": true
+                },
+                {
+                    "title": "Project",
+                    "icon": "nb-person",
+                    "link": "/census/project",
+                    "sortOrder": 8,
+                    "external": false,
+                    "active": true
+                },
+                {
+                    "title": "Census Data Entry (General)",
+                    "icon": "nb-person",
+                    "link": "/census/census-data-entry",
+                    "sortOrder": 8,
+                    "external": false,
+                    "active": true
+                },
+                {
+                    "title": "Census Data Entry(Project)",
+                    "icon": "nb-person",
+                    "link": "/census/census-data-entry-project",
+                    "sortOrder": 10,
+                    "external": false,
+                    "active": true
+                },
+                {
+                    "title": "Reports",
+                    "icon": "nb-bar-chart",
+                    "link": "/census/report",
+                    "sortOrder": 11,
+                    "external": false,
+                    "active": true
+                },
+                {
+                    "title": "Division",
+                    "icon": "nb-person",
+                    "link": "/census/division",
+                    "sortOrder": 12,
+                    "external": false,
+                    "active": true
+                },
+                {
+                    "title": "District",
+                    "icon": "nb-person",
+                    "link": "/census/district",
+                    "sortOrder": 13,
+                    "external": false,
+                    "active": true
+                },
+                {
+                    "title": "Project Type",
+                    "icon": "nb-person",
+                    "link": "/census/projectType",
+                    "sortOrder": 14,
+                    "external": false,
+                    "active": true
+                },
+                {
+                    "title": "Users Mapping",
+                    "icon": "nb-person",
+                    "link": "/census/users-mapping",
+                    "sortOrder": 15,
+                    "external": false,
+                    "active": true
+                }
+            ]
+        },
+        {
+            "moduleName": "Organization Management",
+            "menus": [
+                {
+                    "title": "�?নাম কমিটি কর�?তৃক অন�?মোদিত পদের বিবরণী",
+                    "icon": "nb-grid-a-outline",
+                    "link": "/o-m/post-detail/enam-committee",
+                    "sortOrder": 1,
+                    "external": false,
+                    "active": true
+                },
+                {
+                    "title": "পদ সৃজন",
+                    "icon": "nb-grid-a-outline",
+                    "link": "/o-m/post-detail/other-post",
+                    "sortOrder": 2,
+                    "external": false,
+                    "active": true
+                },
+                {
+                    "title": "পদের মেয়াদ সংরক�?ষণ",
+                    "icon": "nb-grid-a-outline",
+                    "link": "/o-m/post-reservation",
+                    "sortOrder": 3,
+                    "external": false,
+                    "active": true
+                },
+                {
+                    "title": "পদ স�?থায়ীকরণ",
+                    "icon": "nb-grid-a-outline",
+                    "link": "/o-m/post-permanent",
+                    "sortOrder": 4,
+                    "external": false,
+                    "active": true
+                },
+                {
+                    "title": "পদনাম পরিবর�?তন",
+                    "icon": "nb-grid-a-outline",
+                    "link": "/o-m/change-post",
+                    "sortOrder": 5,
+                    "external": false,
+                    "active": true
+                },
+                {
+                    "title": "পদ বিল�?প�?তি ",
+                    "icon": "nb-grid-a-outline",
+                    "link": "/o-m/post-abolition",
+                    "sortOrder": 6,
+                    "external": false,
+                    "active": true
+                },
+                {
+                    "title": "পদমর�?যাদা উন�?নীতকরণ",
+                    "icon": "nb-grid-a-outline",
+                    "link": "/o-m/post-upgrade",
+                    "sortOrder": 7,
+                    "external": false,
+                    "active": true
+                },
+                {
+                    "title": "শ�?ন�?যপদ",
+                    "icon": "nb-grid-a-outline",
+                    "link": "/o-m/vacant",
+                    "sortOrder": 8,
+                    "external": false,
+                    "active": true
+                },
+                {
+                    "title": "অন�?সন�?ধান",
+                    "icon": "nb-grid-a-outline",
+                    "link": "/o-m/inquiry",
+                    "sortOrder": 9,
+                    "external": false,
+                    "active": true
+                },
+                {
+                    "title": "যানবাহন",
+                    "icon": "nb-grid-a-outline",
+                    "children": [
+                        {
+                            "title": "নত�?ন যোগ কর�?ন",
+                            "link": "/o-m/transportation/add-info",
+                            "sortOrder": 10,
+                            "active": true
+                        },
+                        {
+                            "title": "সকল যানবাহন",
+                            "link": "/o-m/transportation/list",
+                            "sortOrder": 11,
+                            "active": true
+                        },
+                        {
+                            "title": "প�?রকৃতি",
+                            "link": "/o-m/transportation/add-type",
+                            "sortOrder": 12,
+                            "active": true
+                        }
+                    ]
+                },
+                {
+                    "title": "অফিস সরঞ�?জাম",
+                    "icon": "nb-grid-a-outline",
+                    "children": [
+                        {
+                            "title": "নত�?ন যোগ কর�?ন ",
+                            "link": "/o-m/instrument/create",
+                            "sortOrder": 13,
+                            "active": true
+                        },
+                        {
+                            "title": "সকল সরঞ�?জাম ",
+                            "link": "/o-m/instrument/list",
+                            "sortOrder": 14,
+                            "active": true
+                        },
+                        {
+                            "title": "সরঞ�?জামের প�?রকৃতি",
+                            "link": "/o-m/instrument/add-type",
+                            "sortOrder": 15,
+                            "active": true
+                        }
+                    ]
+                },
+                {
+                    "title": "সাংগঠনিক কাঠামো",
+                    "icon": "nb-grid-a-outline",
+                    "link": "/o-m/organization",
+                    "sortOrder": 16,
+                    "external": false,
+                    "active": true
+                },
+                {
+                    "title": "ডক�?মেন�?ট",
+                    "icon": "nb-grid-a-outline",
+                    "children": [
+                        {
+                            "title": "নত�?ন যোগ কর�?ন ",
+                            "link": "/o-m/attachment/add",
+                            "sortOrder": 17,
+                            "active": true
+                        },
+                        {
+                            "title": "সকল ডক�?মেন�?ট ",
+                            "link": "/o-m/attachment/list",
+                            "sortOrder": 18,
+                            "active": true
+                        },
+                        {
+                            "title": "ডক�?মেন�?ট  প�?রকৃতি",
+                            "link": "/o-m/attachment/doc-type",
+                            "sortOrder": 19,
+                            "active": true
+                        },
+                        {
+                            "title": "ডক�?মেন�?ট পরের প�?রকৃতি",
+                            "link": "/o-m/attachment/doc-sub-type",
+                            "sortOrder": 20,
+                            "active": true
+                        }
+                    ]
+                },
+                {
+                    "title": "গ�?রেড",
+                    "icon": "nb-grid-a-outline",
+                    "link": "/o-m/grade",
+                    "sortOrder": 21,
+                    "external": false,
+                    "active": true
+                },
+                {
+                    "title": "পদনাম",
+                    "icon": "nb-grid-a-outline",
+                    "link": "/o-m/post-setup",
+                    "sortOrder": 22,
+                    "external": false,
+                    "active": true
+                },
+                {
+                    "title": "রিপোর�?ট",
+                    "icon": "nb-grid-a-outline",
+                    "link": "/o-m/report",
+                    "sortOrder": 23,
+                    "external": false,
+                    "active": true
+                },
+                {
+                    "title": "Users Mapping",
+                    "icon": "nb-grid-a-outline",
+                    "link": "/o-m/user-mapping",
+                    "sortOrder": 24,
+                    "external": false,
+                    "active": true
+                }
+            ]
+        },
+        {
+            "moduleName": "Exam Typing",
+            "menus": [
+                {
+                    "title": "Lab Setup",
+                    "icon": "ion-gear-b",
+                    "link": "/exam/lab",
+                    "sortOrder": 1,
+                    "external": false,
+                    "active": true
+                },
+                {
+                    "title": "Designation",
+                    "icon": "ion-gear-b",
+                    "link": "/exam/designation",
+                    "sortOrder": 2,
+                    "external": false,
+                    "active": true
+                },
+                {
+                    "title": "Exam Setup",
+                    "icon": "ion-gear-b",
+                    "link": "/exam/create-exam",
+                    "sortOrder": 3,
+                    "external": false,
+                    "active": true
+                },
+                {
+                    "title": "Exam Search",
+                    "icon": "nb-search",
+                    "link": "/exam/exam-result",
+                    "sortOrder": 4,
+                    "external": false,
+                    "active": true
+                },
+                {
+                    "title": "Organization",
+                    "icon": "fa fa-building",
+                    "link": "/exam/organization",
+                    "sortOrder": 5,
+                    "external": false,
+                    "active": true
+                },
+                {
+                    "title": "Users Mapping",
+                    "icon": "nb-person",
+                    "link": "/exam/users-mapping",
+                    "sortOrder": 6,
+                    "external": false,
+                    "active": true
+                }
+            ]
+        },
+        {
+            "moduleName": "Access Control List (ACL) Dashboard",
+            "menus": [
+                {
+                    "title": "Dashboard",
+                    "icon": "ion-home",
+                    "link": "/pages/dashboard",
+                    "home": true,
+                    "sortOrder": 1,
+                    "active": true
+                },
+                {
+                    "title": "User Role",
+                    "icon": "nb-layout-two-column",
+                    "sortOrder": 2,
+                    "active": true,
+                    "children": [
+                        {
+                            "title": "Create",
+                            "link": "/pages/roles/create",
+                            "sortOrder": 3,
+                            "active": true
+                        },
+                        {
+                            "title": "List",
+                            "link": "/pages/roles/list",
+                            "sortOrder": 4,
+                            "active": true
+                        }
+                    ]
+                },
+                {
+                    "title": "Users",
+                    "icon": "nb-person",
+                    "sortOrder": 5,
+                    "active": true,
+                    "children": [
+                        {
+                            "title": "Create",
+                            "link": "/pages/users/create",
+                            "sortOrder": 6,
+                            "active": true
+                        },
+                        {
+                            "title": "List",
+                            "link": "/pages/users/list",
+                            "sortOrder": 7,
+                            "active": true
+                        }
+                    ]
+                },
+                {
+                    "title": "Setup",
+                    "icon": "nb-gear",
+                    "hidden": true,
+                    "sortOrder": 8,
+                    "active": true,
+                    "children": [
+                        {
+                            "title": "Org Type",
+                            "link": "/pages/admin/orgtype",
+                            "sortOrder": 9,
+                            "active": true
+                        }
+                    ]
+                },
+                {
+                    "title": "Module",
+                    "icon": "nb-grid-a",
+                    "hidden": true,
+                    "sortOrder": 10,
+                    "active": true,
+                    "children": [
+                        {
+                            "title": "Create",
+                            "link": "/pages/module/create",
+                            "sortOrder": 11,
+                            "active": true
+                        },
+                        {
+                            "title": "List",
+                            "link": "/pages/module/list",
+                            "sortOrder": 12,
+                            "active": true
+                        }
+                    ]
+                },
+                {
+                    "title": "Location",
+                    "icon": "nb-location",
+                    "hidden": true,
+                    "sortOrder": 13,
+                    "active": true,
+                    "children": [
+                        {
+                            "title": "Create",
+                            "link": "/pages/location/create",
+                            "sortOrder": 14,
+                            "active": true
+                        },
+                        {
+                            "title": "List",
+                            "link": "/pages/location/list",
+                            "sortOrder": 15,
+                            "active": true
+                        }
+                    ]
+                },
+                {
+                    "title": "Organization",
+                    "icon": "nb-home",
+                    "hidden": true,
+                    "sortOrder": 16,
+                    "active": true,
+                    "children": [
+                        {
+                            "title": "Create",
+                            "link": "/pages/org/create",
+                            "sortOrder": 17,
+                            "active": true
+                        },
+                        {
+                            "title": "List",
+                            "link": "/pages/org/list",
+                            "sortOrder": 18,
+                            "active": true
+                        }
+                    ]
+                },
+                {
+                    "title": "Menu",
+                    "icon": "nb-menu",
+                    "sortOrder": 19,
+                    "active": true,
+                    "children": [
+                        {
+                            "title": "Create",
+                            "link": "/pages/menus/create",
+                            "sortOrder": 20,
+                            "active": true
+                        },
+                        {
+                            "title": "List",
+                            "link": "/pages/menus/list",
+                            "sortOrder": 21,
+                            "active": true
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
